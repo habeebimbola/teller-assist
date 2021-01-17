@@ -1,0 +1,23 @@
+<!DOCTYPE html >
+<html xmlns:th="http://www.thymeleaf.org/1999">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title></title>
+        <link rel="stylesheet" th:href="@{/styles/styles.css}" type="text/css" />
+    </head>
+    <body>
+        <spring:form action="${pageContext.request.contextPath}/logout">
+            
+        <span id="bannerText">TellerAssist Reports Portal </span>
+        <table>
+            <tr><td>Bank Name</td><td>Fastest Average Speed 
+                    <avg:AvgSpeedDate></avg:AvgSpeedDate>
+                    <avg:AvgSpeedDisplay></avg:AvgSpeedDisplay>
+                </td><td>Bank Speed Benchmark<avg:BenchmarkSpeedDisplay></avg:BenchmarkSpeedDisplay> | <a th:href="" id="homeLink"><span>Home</span></a> | <input type="submit" value = "Logout" />
+                <input type="hidden" name="${_csrf.parameterName}"
+                       value="${_csrf.token}" /></td>  </tr>
+        </table>
+        </spring:form>
+        
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/1999">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>TellerAssist | Teller Details Form</title>
+        <link rel="stylesheet" type="text/css" th:href="@{/styles/styles.css" />
+        <script th:src="@{/scripts/jquery-1.10.2.js}"></script>
+        <script th:src="@{/scripts/jquery.flot.js"}></script>
+        <script th:src="@{/scripts/jquery.flot.categories.js" }></script>
+        <script th:src="@{/scripts/tellerDetailsChartScript.js}">
+        </script>
+    </head>
+    <body>
+        <div id="headerPane" th:include="headerPage.html"></div>
+        <div id="centerPane">
+            <h1>Branch Teller Details</h1>
+            <hr />
+            <h2>Branch Name : <span th:value="${trnxBean.branchDetail.name}"></span>
+                <span style="float: left; font-size: 25px; color: darksalmon;">Number Of Tellers Above Benchmark : <span th:value="${trnxBean.noOfTellers}"></span></span>
+            </h2>
+            <h2>Average Teller Transaction Speed</h2>
+            <div id="tellerAvgSpeedPlaceholder">
+            </div>
+            <h2>Total Teller Transaction</h2>
+            <div id="totalTellerTransCountPlaceholder">
+            </div>
+            <h2>Total Teller Amount</h2>
+            <div id="tellerAmountPlaceholder">
+            </div>
+        </div>
+
+    </body>
+</html>

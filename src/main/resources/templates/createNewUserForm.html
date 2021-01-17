@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/1999">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>TellerAssist | New User Form</title>
+        <link rel="stylesheet" th:href="@{/styles/styles.css}" type="text/css" />
+    </head>
+    <body>
+        <div id="bodyContent">
+            <div id="headerPane" th:include=""headerPage.html"></div>
+            <div id="centerPane">
+                <h1>Create New User Form</h1>
+                <hr />
+                <fieldset id="newUserPane">
+                    <legend>Create New User:</legend>
+                    <form modelAttribute="tellerAssistUser">
+                        <div class="successsBox">
+                            <span th:value="${tellerAssistUser.successMessage}"></span>
+                        </div>
+                        <div th:if="${errors}">
+
+                        </div>
+
+
+                        <p><label path="username">Username:</label> <input type="text" path="username" size="30" maxlength="30" id="username"></input></p>
+                        <p><label path="firstName">Firstname: </label><input type="text" path="firstName" size="30" maxlength="30" id="firstName"></input></p>
+                        <p><label path="lastName">Lastname:</label> <input type="text" path="lastName" size="30" maxlength="30" id="lastName"></input></p>
+                        <p><label path="email">Email:</label> <input type="text" path="email" size="30" maxlength="30" id="email"></input></p>
+                        <p><label path="password">Password:</label><password path="password" size="30" id="password"></password></p>
+                        <p><label path="confirmPassword">Confirm Password:</label><password  path="confirmPassword" id="confirmPassword" size="30"></password></p>
+                        <p><label path="branchAssigned.id">Branch:</label> <select path="branchAssigned.id" id="branchAssigned">
+                                <option value="-1">&lt;Select&gt;</option>
+                                <div th:each="${branch :branches}" >
+                                    <option value="${branch.id}"><span th:value="${branch.name}"></span></option>
+                                </div>
+                            </select></p>
+                        <p><label path="role.id">Role:</label> <select path="role.id" id="role">
+                                <option value="-1">&lt;Select&gt;</option>
+                                <c:forEach var ="currentRole" items="${roles}">
+                                    <option value="${currentRole.id}"><span th:value="${currentRole.roleName}"></span></option>
+                                </c:forEach>
+                            </select></p>
+                        <div th:if="${not saved}">
+                            <input type="submit" value="Create User" />
+                        </div>
+                        
+                    </form>
+                </fieldset>
+            </div>
+        </div>
+
+    </body>
+</html>

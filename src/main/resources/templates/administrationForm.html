@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/1999">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>TellerAssist | Administration Form</title>
+        <link rel="stylesheet" th:href="@{/styles/styles.css}" type="text/css" />
+        </head>
+        <body>
+            <div id="bodyContent">
+                <div id="headerPane" th:include="@{/headerPage.html}">
+
+                </div>
+            <div id="centerPane">
+                <h1>TellerAssist Administration Page </h1>
+                <hr />
+                <div id="contentPane">
+                    <p><a th:href="@{/newUserCreate.action}">Create New User</a></p>
+                    <p><a th:href="@{/configSpeedBenchmark.action}">Configure Benchmark Speed</a></p>
+                    <p><a th:href="@{/manageuser.action}">Manage Existing User</a></p>
+                </div>
+            </div>
+        </div>
+
+
+    </body>
+</html>

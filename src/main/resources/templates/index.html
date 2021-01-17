@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>TellerAssist Reports | Index Page</title>
+        <link rel="stylesheet"  th:href="@{/styles/styles.css}" type="text/css" />
+    </head>
+
+    <body>
+            <div id="headerPane">
+                <h1>Welcome to the TellerAssist  Reports Portal</h1>
+            </div>
+
+            <hr />
+            <fieldset id="userDetailsPane">
+                <legend>User Credentials:</legend>
+                <div th:if ="${not empty error}" class="loginerror" th:value="${error}">
+                </div>
+                <div th:if="${not empty msg}" class="msg" th:value ="${msg}">
+                </div>
+            </c:th>
+            <form th:action="@{/login}" method="POST">
+            <p><label for="username">Username: </label>
+                <input  name="tellerAssistUsername" type="text" size="30" id="username" maxlength="30" required="required" maxlength="30" />
+            </p>
+                <p><label for="password">Password: </label>
+                    <input  name="tellerAssistPassword" type="password" size="30" required="required" id="password" maxlength="30" />
+                </p>
+                <input type="submit" value="Login" />
+            </form>
+        </fieldset>
+    </body>
+</html>

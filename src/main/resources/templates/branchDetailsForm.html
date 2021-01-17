@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/1999">
+ <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>TellerAssist | Branch Details Form</title>
+        <link rel="stylesheet" th:href="@{/styles/styles.css}" type="text/css" />
+        <script th:src="@{/scripts/jquery-1.10.2.js}"></script>
+        <script th:src="@{/scripts/jquery.flot.js}"></script>
+        <script th:src="@{/scripts/jquery.flot.axislabels.js}"></script>
+        <script th:src="@{/scripts/jquery.flot.time.js}"></script>
+        <script th:src="@{/scripts/branchTrnxScripts.js}">
+        </script>
+    </head>
+    <body>
+        <div id="headerPane" th:include="headerPage.html">
+        </div>
+        <div id="leftCenterPane" style="float: left;">
+            <p><a th:href="@{/admin.action}" >Administration</a></p>
+        </div>
+        <div id="centerPane" style="float:left;">
+            <h1>TellerAssist Branch Details</h1>
+            <hr />
+            <h1>Branch Name: <p th:value="${trnxBean.branchDetail.name}"></p> Branch Speed<p th:value="${trnxBean.branchSpeed}"></p>  <span style="float: right;">Number Of Tellers <p th:value="${trnxBean.noOfTellers}"></p></span> </h1>
+                <table>
+                    <tr>
+                        <td>
+                            <div id="totalTransChartPlaceholder">
+                                <span Style="font-family: Tahoma; font-size: 25pt; color: crimson;" ID="branchTranCount"> </span>
+                            </div>
+                        </td>
+                        <td>
+                            <div id="branchRequestsOnQueueChartPlaceholder">
+                                <span Style="font-family: Tahoma; font-size: 25pt; color: crimson;" id="branchRequestOnQueueCount"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <div id="noOfTellerBankBenchmarkChartPlaceholder">
+                                <span Style="font-family: Tahoma; font-size: 25pt; color: crimson;" id="noOfTellerAboveBankBenchmark"></span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4 style="font-family:tahoma; font-weight:normal;color: darksalmon;">Total Branch Transactions</h4>
+                        </td>
+                        <td>
+                            <h4 style="font-family:tahoma; font-weight:normal;color: darksalmon;">No Of Transactions On Queue</h4>
+                        </td>
+                        <td>
+                            <h4 style="font-family:tahoma; font-weight:normal;color: darksalmon;">No Tellers Above Benchmark</h4>
+                        </td>
+                    </tr>
+                </table>
+
+                        <span id="bodyLink"><a th:href="@{/tellerDetails.action}">Teller Details</a></span>
+            <span id="bodyLink">
+                <a th:href="@{/totalTrnx.action}">Total Branch Transactions</a></span>
+        </div>
+
+
+    </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/1999">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>TellerAssist Reports | Transaction Details</title>
+        <link rel="stylesheet" th:href="@{/styles/styles.css"} type="text/css" />
+        <script th:src="@{/scripts/jquery-1.10.2.js"}></script>
+        <script th:src="@{/scripts/jquery.flot.js"}></script>
+        <script th:src="@{/scripts/jquery.flot.axislabels.js"}></script>
+        <script th:src="@{/scripts/jquery.flot.time.js"}></script>
+        <script th:src="@{/scripts/customClientScripts.js"}>
+        </script>
+    </head>
+    <body>
+        <div id="bodyContent">
+            <div id="headerPane"><%@include file="headerPage.jsp" %></div>
+            <div id="centerPane">
+                <div id="leftCenterPane">
+                    <p><a th:href="@{/admin.action"}>Administration</a></p>
+                </div>
+                <div id="rightCenterPane">
+                    <h1>Transaction Details </h1>
+                    <hr />
+                    <table>
+                        <tr><td><div id="totalTransChartPlaceholder">
+                                    <span ID="totalTranCount"></span>
+                                </div></td><td><div id="noOfBranchesBelowBenchmarkChartPlaceholder">
+                                    <span ID="branchBelowBenchmarkCount"></span>
+                                </div></td><td><div id="noOfRequestOnQueuePlaceholder">
+                                    <span ID="requestQueueCount"></span>
+                                    <span id="val"></span>
+                                </div></td></tr>
+                        <tr>
+                            <td><h3 style=" 
+                                    font-family:tahoma; font-weight:normal;color: darksalmon;">Total Transactions</h3></td>
+                            <td><h4 style="color: darksalmon; 
+                                    font-family:tahoma;font-weight:normal;color: darksalmon;">No Of Branches Below Processing Benchmark</h4></td>
+                            <td><h3 style="color: darksalmon; 
+                                    font-family:tahoma;font-weight:normal;">No Of Requests On Queue</h3></td>
+                        </tr>
+                    </table>
+                    <span style="color:crimson; font-size:20pt; font-weight:normal; font-style:italic;">Average Transaction Per Minute Graph</span>
+                    <div id="summaryChartplaceholder">
+                    </div>
+
+                    <span id='bodyLink' style="position: relative;top:10%;left:600px;"><a th:href="@{/branchDetails.action}">My Branch Details</a></span>
+                </div>
+
+            </div>
+        </div>
+
+    </body>
+</html>

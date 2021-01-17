@@ -1,0 +1,204 @@
+.errors{color: red;
+        font-family: tahoma; 
+        font-size: 18px;}
+.loginerror {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+#userDetailsPane{width:500px;
+                 position: relative;
+                 left:25%;}
+#newUserPane{ width:500px;
+              position: relative;
+              left:4%;
+}
+
+#speedConfigPane{width:500px;
+                 position: relative;
+                 left:25%;
+}
+#headerPane{ position:relative;
+             left: 30%;
+             right: 30%;
+             width:100%;
+             height: 30%;
+             top:0px;
+}
+#centerPane{ width:75%; 
+             height: 75%;
+             left:20%;
+             position:relative;
+}
+#contentPane{ width:40%;
+              height: 20%;
+              left:20%;
+              position: relative;
+}
+#rightCenterPane{float:left;
+                 width:700px;
+                 padding:3%;
+                 margin-top:0px;
+}
+#leftCenterPane{width:10%;
+                padding:5%;
+                float:left;
+}
+#leftCenterPane p a{text-decoration:none;
+                    font-family: tahoma;
+                    font-size: 20pt;
+}
+#contentPane p a { text-decoration:none;
+                   font-family: tahoma;
+                   font-size: 1.5em;
+}
+
+#bodyLink{text-decoration: none;
+          width:30px;
+          height: 40px;
+          border:solid thin black;
+}
+#homeLink,#logoutLink{ text-decoration: none;
+                       font-family: tahoma;
+}
+#bannerText{ font-family: tahoma;
+             font-size:20pt;
+             color:darksalmon;
+}
+#bodyContent{width:100%;
+             height:100%;}
+
+#tellerAvgSpeedPlaceholder{
+    width: 700px;
+    height: 200px;
+}
+#totalTellerTransCountPlaceholder{
+    width: 700px;
+    height: 200px;
+}
+#tellerAmountPlaceholder{
+    width: 700px;
+    height: 200px;
+}
+#branchTransactionPlaceholder {
+    width: 700px;
+    height: 200px;
+}
+
+#totalTransactionOnQueuePlaceholder {
+    width: 700px;
+    height: 200px;
+}
+#noOfTellersBankBenchmarkPlaceholder{
+    width: 700px;
+    height: 200px;
+}
+#summaryChartplaceholder {
+    width: 700px;
+    height: 300px;
+}
+
+#totalTransChartPlaceholder {
+    width: 200px;
+    height: 200px;
+    border: thin solid darkkhaki;
+    border-radius: 150px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 70px;
+    padding-left: 80px;
+    /*background-color: crimson;*/
+    background-image:url('../images/circlebar3.png');
+    background-repeat:no-repeat;
+}
+
+#noOfBranchesBelowBenchmarkChartPlaceholder {
+    width: 200px;
+    height: 200px;
+    border: thin solid darkkhaki;
+    border-radius: 150px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 70px;
+    padding-left: 80px;
+    /*background-color: crimson;*/
+    margin-left:30px;
+    background-image:url('../images/circlebar3.png');
+    background-repeat:no-repeat;
+}
+
+#noOfRequestOnQueuePlaceholder {
+    width: 200px;
+    height: 200px;
+    border: thin solid darkkhaki;
+    border-radius: 150px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-top: 70px;
+    padding-left: 80px;
+    /*background-color: crimson;*/
+    background-image:url('../images/circlebar3.png');
+    background-repeat:no-repeat;
+}
+
+#branchRequestsOnQueueChartPlaceholder {
+    width: 200px;
+    height: 200px;
+    border: thin solid darkkhaki;
+    border-radius: 150px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-top: 70px;
+    padding-left: 80px;
+    /*background-color: crimson;*/
+    background-image:url('../images/circlebar3.png');
+    background-repeat:no-repeat;
+}
+#noOfTellerBankBenchmarkChartPlaceholder {
+    width: 200px;
+    height: 200px;
+    border: thin solid darkkhaki;
+    border-radius: 150px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-top: 70px;
+    padding-left: 80px;
+    /*background-color: crimson;*/
+    background-image:url('../images/circlebar3.png');
+    background-repeat:no-repeat;
+}
+
+#totalTranCount, #branchBelowBenchmarkCount{
+    font-family: Tahoma;
+    font-size: 2.5em;
+    font-weight: normal;
+    color: crimson;
+}
+#branchTranCount{
+    font-family: Tahoma;
+    font-size: 2.5em;
+    font-weight: normal;
+    color: crimson;
+}
+#requestQueueCount, #branchRequestOnQueueCount {
+    font-family: Tahoma;
+    font-size: 2.5em;
+    font-weight: normal;
+    color: crimson;
+}
+#transQueueCount{
+    font-family: Tahoma;
+    font-size: 2.5em;
+    font-weight: normal;
+    color: crimson;
+}
+.successBox {
+    width:50px;
+    height:100px;
+    font-family: tahoma;
+    color:lightsalmon;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/1999">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>TellerAssist | Total Branch Transaction Details Form</title>
+        <link rel="stylesheet" th:href="@{/styles/styles.css"} type="text/css" />
+        <script th:src="@{/scripts/jquery-1.10.2.js"}></script>
+        <script th:src="@{/scripts/jquery.flot.js"}></script>
+        <script th:src="@{/scripts/jquery.flot.categories.js"}></script>
+        <script th:src="@{/scripts/totalBranchTrnxChartScript.js"}>
+        </script>
+    </head>
+    <body>
+        <div id="headerPane"><%@include file="headerPage.jsp" %></div>
+        <div id="centerPane">
+            <h1>Total Branch Transaction Details ( <span th:value="${trnxBean.branchDetail.name}"></span> )</h1>
+                <hr />
+                <h1> Total Number Of Transactions <span th:value="${trnxBean.completedTrnxCount}"></span></h1>
+                <div id="branchTransactionPlaceholder">
+
+                </div>
+                <br />
+                <div>
+                    <h1>Number Of Transactions On Queue <span th:value="${trnxBean.trnxOnQueueCount}"></span></h1>
+                <br />
+            </div>
+            <div id="totalTransactionOnQueuePlaceholder">
+
+            </div>
+        </div>
+
+    </body>
+</html>
